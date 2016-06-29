@@ -13,8 +13,19 @@
         getInitialState: function () {
           return {who: "Elowyn"}
         },
+        handleChange: function (event) {
+          let nextState = { who: event.target.value};
+          this.setState(nextState);
+        },
         render: function () {
-          return React.createElement("h1", null, "Oh Hai, " + this.state.who + "!!!!");
+          return React.createElement("div", null,
+            React.createElement("h1", null, "Oh Hai, " + this.state.who + "!!!!"),
+            React.createElement("input", {
+              onChange: this.handleChange,
+              type: "text",
+              value: this.state.who,
+            })
+          );
         }
       });
 
