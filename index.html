@@ -9,10 +9,10 @@
     <script src="https://fb.me/react-15.0.1.js"></script>
     <script src="https://fb.me/react-dom-15.0.1.js"></script>
     <script>
-      let element = React.createElement("h1", null, "Oh Hai!!!");
-      let container = document.getElementById("hello");
-
-      ReactDOM.render(element, container);
+      ReactDOM.render(
+        React.createElement("h1", null, "Oh Hai!!!"),
+        document.getElementById("hello")
+      );
     </script>
   </body>
 </html>
