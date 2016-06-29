@@ -10,8 +10,11 @@
     <script src="https://fb.me/react-dom-15.0.1.js"></script>
     <script>
       let Hello = React.createClass({
+        getInitialState: function () {
+          return {who: "Elowyn"}
+        },
         render: function () {
-          return React.createElement("h1", null, "Oh Hai!!!");
+          return React.createElement("h1", null, "Oh Hai, " + this.state.who + "!!!!");
         }
       });
 
