@@ -26,39 +26,48 @@
         document.getElementById("links")
       );
     </script>
-    <div class="container" id="hello"></div>
+    <div class="container" id="content">
+    </div>
     <script>
-      let Hello = React.createClass({
-        getInitialState: function () {
-          return {who: "Elowyn"}
+      let cityDeets = {
+        "houston"    : "🚀 Dirty South! And NASA!",
+        "denver"     : "⛺️ Mile High! knowmsayin?",
+        "new orleans": "🍹 Laissez les bon temps roulez!",
+        "kunming"    : "💐City of Eternal Spring",
+      }
+      let Cities = React.createClass({
+        getInitialState: function() {
+          return {city: ""}
         },
         handleChange: function (event) {
-          let nextState = { who: event.target.value};
+          let nextState = { city: event.target.value};
           this.setState(nextState);
         },
         render: function () {
-          let message
+          let message;
 
-          if (this.state.who == "") {
-            message = "Hello?";
-          } else {
-            message = "Oh Hai, " + this.state.who + "!!!!"
+          if (cityDeets[this.state.city.toLowerCase()]) {
+            message = cityDeets[this.state.city.toLowerCase()];
+          } else if (this.state.city !== "") {
+            message = this.state.city + "? 🤔 Never heard of it."
           }
           return React.createElement("div", null,
-            React.createElement("h1", null, message),
+            React.createElement("h1", null, "What is your favorite city?"),
             React.createElement("input", {
               onChange: this.handleChange,
               type: "text",
-              value: this.state.who,
-            })
-          );
+              value: this.state.city,
+            }),
+            React.createElement("h3", null, message)
+          )
         }
-      });
+      })
+
 
       ReactDOM.render(
-        React.createElement(Hello),
-        document.getElementById("hello")
-      );
+        React.createElement(Cities),
+        document.getElementById("content")
+      )
     </script>
   </body>
 </html>
