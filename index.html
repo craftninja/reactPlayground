@@ -11,15 +11,14 @@
   </head>
   <body>
     <nav>
-
       <div class="container" id="links"></div>
     </nav>
     <script>
-      let pages = ["index"].map(function(page, index) {
+      let pages = ["/"].map(function(page, index) {
         return React.createElement(
           "a",
           {href: page, className: "button", key: "link" + index},
-          page === "index" ? "Oh hai" : page
+          page === "/" ? "Oh hai" : page
         )
       })
       ReactDOM.render(
