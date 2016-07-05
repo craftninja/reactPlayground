@@ -8,6 +8,20 @@
     <script src="https://fb.me/react-dom-15.0.1.js"></script>
   </head>
   <body>
+    <div class="container" id="links"></div>
+    <script>
+      let pages = ["link1", "link2", "link3"].map(function(page, index) {
+        return React.createElement(
+          "a",
+          {href: page, className: "button", key: "link" + index},
+          page
+        )
+      })
+      ReactDOM.render(
+        React.createElement("div", null, pages),
+        document.getElementById("links")
+      );
+    </script>
     <div class="container" id="hello"></div>
     <script>
       let Hello = React.createClass({
