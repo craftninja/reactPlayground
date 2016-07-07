@@ -1,4 +1,4 @@
-let pages = ["/", "cities"].map(function(page, index) {
+let pages = ["/", "cities", "helloJSX"].map(function(page, index) {
   return React.createElement(
     "a",
     {href: page, className: "button", key: "link" + index},
