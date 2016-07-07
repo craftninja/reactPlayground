@@ -5,3 +5,7 @@ body {
 nav {
   border-bottom: 1px solid #bbbbbb;
 }
+
+.button {
+  margin-left: 1em;
+}
