@@ -8,6 +8,7 @@
     <title>React Playground</title>
     <script src="https://fb.me/react-15.0.1.js"></script>
     <script src="https://fb.me/react-dom-15.0.1.js"></script>
+    <script src="js/cityDeets.js"></script>
   </head>
   <body>
     <nav>
@@ -17,12 +18,6 @@
     <div class="container" id="content">
     </div>
     <script>
-      let cityDeets = {
-        "houston"    : "🚀 Dirty South! And NASA!",
-        "denver"     : "⛺️ Mile High! knowmsayin?",
-        "new orleans": "🍹 Laissez les bon temps roulez!",
-        "kunming"    : "💐City of Eternal Spring",
-      }
       let Cities = React.createClass({
         getInitialState: function() {
           return {city: ""}
