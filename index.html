@@ -13,19 +13,7 @@
     <nav>
       <div class="container" id="links"></div>
     </nav>
-    <script>
-      let pages = ["/", "cities"].map(function(page, index) {
-        return React.createElement(
-          "a",
-          {href: page, className: "button", key: "link" + index},
-          page === "/" ? "Oh hai" : page
-        )
-      })
-      ReactDOM.render(
-        React.createElement("div", null, pages),
-        document.getElementById("links")
-      );
-    </script>
+    <script src="js/links.js"></script>
     <div class="container" id="hello"></div>
     <script>
       let Hello = React.createClass({
