@@ -1,5 +1,5 @@
 let page = window.location.pathname
-let links = ["/", "cities", "helloJSX"].map(function(link, index) {
+let links = ["/", "cities", "helloJSX", "citiesJSX"].map(function(link, index) {
   return React.createElement(
     "a",
     {
